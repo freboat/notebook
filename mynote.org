@@ -17,38 +17,38 @@ ip neighbour show
 ** Linux network config
 *** redhat
 
-ÖØÆôÍøÂç£º/etc/init.d/network restart/stop
+é‡å¯ç½‘ç»œï¼š/etc/init.d/network restart/stop
         service network restart
 
 
-Ò»¡¢ÅäÖÃÎÄ¼þÏê½â
-ÔÚRHEL»òÕßCentOSµÈRedhatÏµµÄLinuxÏµÍ³Àï£¬¸úÍøÂçÓÐ¹ØµÄÖ÷ÒªÉèÖÃÎÄ¼þÈçÏÂ£º
+ä¸€ã€é…ç½®æ–‡ä»¶è¯¦è§£
+åœ¨RHELæˆ–è€…CentOSç­‰Redhatç³»çš„Linuxç³»ç»Ÿé‡Œï¼Œè·Ÿç½‘ç»œæœ‰å…³çš„ä¸»è¦è®¾ç½®æ–‡ä»¶å¦‚ä¸‹ï¼š
 
-/etc/host.conf         ÅäÖÃÓòÃû·þÎñ¿Í»§¶ËµÄ¿ØÖÆÎÄ¼þ
-/etc/hosts             Íê³ÉÖ÷»úÃûÓ³ÉäÎªIPµØÖ·µÄ¹¦ÄÜ
-/etc/resolv.conf       ÓòÃû·þÎñ¿Í»§¶ËµÄÅäÖÃÎÄ¼þ,ÓÃÓÚÖ¸¶¨ÓòÃû·þÎñÆ÷µÄÎ»ÖÃ
-/etc/sysconfig/network °üº¬ÁËÖ÷»ú×î»ù±¾µÄÍøÂçÐÅÏ¢,ÓÃÓÚÏµÍ³Æô¶¯.
-/etc/sysconfig/network-script/    ÏµÍ³Æô¶¯Ê±³õÊ¼»¯ÍøÂçµÄÒ»Ð©ÐÅÏ¢
-/etc/xinetd.conf       ¶¨ÒåÁËÓÉ³¬¼¶½ø³ÌxinetdÆô¶¯µÄÍøÂç·þÎñ
-/etc/networks          Íê³ÉÓòÃûÓëÍøÂçµØÖ·µÄÓ³Éä
-/etc/protocols         Éè¶¨ÁËÖ÷»úÊ¹ÓÃµÄÐ­ÒéÒÔ¼°¸÷¸öÐ­ÒéµÄÐ­ÒéºÅ
-/etc/services          Éè¶¨Ö÷»úµÄ²»Í¬¶Ë¿ÚµÄÍøÂç·þÎñ
+/etc/host.conf         é…ç½®åŸŸåæœåŠ¡å®¢æˆ·ç«¯çš„æŽ§åˆ¶æ–‡ä»¶
+/etc/hosts             å®Œæˆä¸»æœºåæ˜ å°„ä¸ºIPåœ°å€çš„åŠŸèƒ½
+/etc/resolv.conf       åŸŸåæœåŠ¡å®¢æˆ·ç«¯çš„é…ç½®æ–‡ä»¶,ç”¨äºŽæŒ‡å®šåŸŸåæœåŠ¡å™¨çš„ä½ç½®
+/etc/sysconfig/network åŒ…å«äº†ä¸»æœºæœ€åŸºæœ¬çš„ç½‘ç»œä¿¡æ¯,ç”¨äºŽç³»ç»Ÿå¯åŠ¨.
+/etc/sysconfig/network-script/    ç³»ç»Ÿå¯åŠ¨æ—¶åˆå§‹åŒ–ç½‘ç»œçš„ä¸€äº›ä¿¡æ¯
+/etc/xinetd.conf       å®šä¹‰äº†ç”±è¶…çº§è¿›ç¨‹xinetdå¯åŠ¨çš„ç½‘ç»œæœåŠ¡
+/etc/networks          å®ŒæˆåŸŸåä¸Žç½‘ç»œåœ°å€çš„æ˜ å°„
+/etc/protocols         è®¾å®šäº†ä¸»æœºä½¿ç”¨çš„åè®®ä»¥åŠå„ä¸ªåè®®çš„åè®®å·
+/etc/services          è®¾å®šä¸»æœºçš„ä¸åŒç«¯å£çš„ç½‘ç»œæœåŠ¡
 
 
-1. /etc/host.confÎÄ¼þµÄÄ¬ÈÏÐÅÏ¢ÈçÏÂ£º
+1. /etc/host.confæ–‡ä»¶çš„é»˜è®¤ä¿¡æ¯å¦‚ä¸‹ï¼š
 
-multi on           #ÔÊÐíÖ÷»úÓµÓÐ¶à¸öIPµØÖ·
-order hosts,bind   #Ö÷»úÃû½âÎöË³Ðò£¬¼´±¾µØ½âÎö,DNSÓòÃû½âÎöµÄË³Ðò
+multi on           #å…è®¸ä¸»æœºæ‹¥æœ‰å¤šä¸ªIPåœ°å€
+order hosts,bind   #ä¸»æœºåè§£æžé¡ºåºï¼Œå³æœ¬åœ°è§£æž,DNSåŸŸåè§£æžçš„é¡ºåº
 
-Õâ¸öÎÄ¼þÒ»°ã²»ÐèÒªÎÒÃÇÐÞ¸Ä£¬Ä¬ÈÏµÄ½âÎöË³ÐòÊÇ±¾µØ½âÎö,DNS·þÎñÆ÷½âÎö£¬Ò²¾ÍÊÇËµÔÚ±¾ÏµÍ³Àï¶ÔÓÚÒ»¸öÖ÷»úÃûÊ×ÏÈ½øÐÐ±¾µØ½âÎö£¬Èç¹û±¾µØ½âÎöÃ»ÓÐ£¬È»ºó½øÐÐDNS·þÎñÆ÷½âÎö¡£
+è¿™ä¸ªæ–‡ä»¶ä¸€èˆ¬ä¸éœ€è¦æˆ‘ä»¬ä¿®æ”¹ï¼Œé»˜è®¤çš„è§£æžé¡ºåºæ˜¯æœ¬åœ°è§£æž,DNSæœåŠ¡å™¨è§£æžï¼Œä¹Ÿå°±æ˜¯è¯´åœ¨æœ¬ç³»ç»Ÿé‡Œå¯¹äºŽä¸€ä¸ªä¸»æœºåé¦–å…ˆè¿›è¡Œæœ¬åœ°è§£æžï¼Œå¦‚æžœæœ¬åœ°è§£æžæ²¡æœ‰ï¼Œç„¶åŽè¿›è¡ŒDNSæœåŠ¡å™¨è§£æžã€‚
 
-2. /etc/hostsÎÄ¼þÄ¬ÈÏµÄÄÚÈÝ´ó¸ÅÈçÏÂ£º
+2. /etc/hostsæ–‡ä»¶é»˜è®¤çš„å†…å®¹å¤§æ¦‚å¦‚ä¸‹ï¼š
 
 127.0.0.1   butbueatiful   localhost.localdomain localhost
 ::1             localhost6.localdomain6 localhost6
 
-¿É¼û£¬Ä¬ÈÏµÄÇé¿öÊÇ±¾»úipºÍ±¾»úÒ»Ð©Ö÷»úÃûµÄ¶ÔÓ¦¹ØÏµ£¬µÚÒ»ÐÐÊÇipv4ÐÅÏ¢£¬µÚ¶þÐÐÊÇipv6ÐÅÏ¢£¬Èç¹ûÓÃ²»ÉÏipv6±¾»ú½âÎö£¬Ò»°ã°Ñ¸ÃÐÐ×¢ÊÍµô¡£
-µÚÒ»ÐÐµÄ½âÎöÐ§¹ûÊÇ£¬butbueatiful localhost.localdomain localhost¶¼»á±»½âÎö³É127.0.0.1,ÎÒÃÇ¿ÉÒÔÓÃpingÊÔÊÔ¡£
+å¯è§ï¼Œé»˜è®¤çš„æƒ…å†µæ˜¯æœ¬æœºipå’Œæœ¬æœºä¸€äº›ä¸»æœºåçš„å¯¹åº”å…³ç³»ï¼Œç¬¬ä¸€è¡Œæ˜¯ipv4ä¿¡æ¯ï¼Œç¬¬äºŒè¡Œæ˜¯ipv6ä¿¡æ¯ï¼Œå¦‚æžœç”¨ä¸ä¸Šipv6æœ¬æœºè§£æžï¼Œä¸€èˆ¬æŠŠè¯¥è¡Œæ³¨é‡ŠæŽ‰ã€‚
+ç¬¬ä¸€è¡Œçš„è§£æžæ•ˆæžœæ˜¯ï¼Œbutbueatiful localhost.localdomain localhostéƒ½ä¼šè¢«è§£æžæˆ127.0.0.1,æˆ‘ä»¬å¯ä»¥ç”¨pingè¯•è¯•ã€‚
 [root@butbueatiful ~]# ping -c 3 butbueatiful
 PING butbueatiful (127.0.0.1) 56(84) bytes of data.
 64 bytes from butbueatiful (127.0.0.1): icmp_seq=1 ttl=64 time=0.061 ms
@@ -69,45 +69,45 @@ PING butbueatiful (127.0.0.1) 56(84) bytes of data.
 3 packets transmitted, 3 received, 0% packet loss, time 1999ms
 rtt min/avg/max/mdev = 0.035/0.046/0.055/0.011 ms
 
-¿´µ½ÉÏÃæµÄ½á¹û£¬Äã¿ÉÄÜ»áÎÊÎªÊ²Ã´ping localhost.localdomainµÄÊ±ºò£¬ÏÂÃæÏÔÊ¾µÄÊÇÈ´ÊÇbutbueatiful£¬ÕâÊÇÒòÎªµÚÒ»¸öÖ÷»úÃûbutbueatifulºóÃæµÄÄÇÐ©Ö÷»úÃûÆäÊµ¶¼ÊÇbutbueatifulµÄÖ÷»ú±ðÃû¡£
+çœ‹åˆ°ä¸Šé¢çš„ç»“æžœï¼Œä½ å¯èƒ½ä¼šé—®ä¸ºä»€ä¹ˆping localhost.localdomainçš„æ—¶å€™ï¼Œä¸‹é¢æ˜¾ç¤ºçš„æ˜¯å´æ˜¯butbueatifulï¼Œè¿™æ˜¯å› ä¸ºç¬¬ä¸€ä¸ªä¸»æœºåbutbueatifulåŽé¢çš„é‚£äº›ä¸»æœºåå…¶å®žéƒ½æ˜¯butbueatifulçš„ä¸»æœºåˆ«åã€‚
 
-Èç¹ûÎÒÃÇÒª×·¼ÓÐÂµÄ±¾µØ½âÎö£¬±ÈÈçÎÒÃÇÏ£ÍûÔÚÎÒÃÇµÄ»úÆ÷Àï°Ñyyyy.comºÍwww.yyyy.com¶¼½âÎö³É192.168.0.100£¬ÄÇÃ´¾Í×·¼ÓÈçÏÂÒ»¾ä¼´¿É£º
+å¦‚æžœæˆ‘ä»¬è¦è¿½åŠ æ–°çš„æœ¬åœ°è§£æžï¼Œæ¯”å¦‚æˆ‘ä»¬å¸Œæœ›åœ¨æˆ‘ä»¬çš„æœºå™¨é‡ŒæŠŠyyyy.comå’Œwww.yyyy.coméƒ½è§£æžæˆ192.168.0.100ï¼Œé‚£ä¹ˆå°±è¿½åŠ å¦‚ä¸‹ä¸€å¥å³å¯ï¼š
 192.168.0.100 yyyy.com www.yyyy.com
 
-Í¬Ñù£¬ÔÚÕâÀï£¬www.yyyy.comÊÇyyyy.comµÄÖ÷»ú±ðÃû¡£
+åŒæ ·ï¼Œåœ¨è¿™é‡Œï¼Œwww.yyyy.comæ˜¯yyyy.comçš„ä¸»æœºåˆ«åã€‚
 
-Èç¹ûÄã×ÐÏ¸Ò»Ïë£¬»á·¢ÏÖ£¬ÆäÊµÕâ¸öÎÄ¼þÊÇºÜÎ£ÏÕµÄ£¬Èç¹ûÓÐÈË¶ñÒâÐÞ¸ÄÁËÄãÕâ¸öÎÄ¼þ£¬±ÈÈç°ÑÌÔ±¦µÄÍøÕ¾ÓòÃû½âÎöµ½ÁËËûµÄµöÓãÍøÕ¾£¬ÄÇÄã¾ÍÒªÖÐÕÐÁË¡£
+å¦‚æžœä½ ä»”ç»†ä¸€æƒ³ï¼Œä¼šå‘çŽ°ï¼Œå…¶å®žè¿™ä¸ªæ–‡ä»¶æ˜¯å¾ˆå±é™©çš„ï¼Œå¦‚æžœæœ‰äººæ¶æ„ä¿®æ”¹äº†ä½ è¿™ä¸ªæ–‡ä»¶ï¼Œæ¯”å¦‚æŠŠæ·˜å®çš„ç½‘ç«™åŸŸåè§£æžåˆ°äº†ä»–çš„é’“é±¼ç½‘ç«™ï¼Œé‚£ä½ å°±è¦ä¸­æ‹›äº†ã€‚
 
-3. /etc/resolv.conf, Ö¸¶¨ÓòÃû½âÎöµÄDNS·þÎñÆ÷IPµÈÐÅÏ¢, ÅäÖÃ²ÎÊýÒ»°ã½Ó´¥µ½µÄÓÐ4¸ö£º
+3. /etc/resolv.conf, æŒ‡å®šåŸŸåè§£æžçš„DNSæœåŠ¡å™¨IPç­‰ä¿¡æ¯, é…ç½®å‚æ•°ä¸€èˆ¬æŽ¥è§¦åˆ°çš„æœ‰4ä¸ªï¼š
 
-nameserver    Ö¸¶¨DNS·þÎñÆ÷µÄIPµØÖ·
-domain        ¶¨Òå±¾µØÓòÃûÐÅÏ¢
-search        ¶¨ÒåÓòÃûµÄËÑË÷ÁÐ±í
-sortlist      ¶Ôgethostbyname·µ»ØµÄµØÖ·½øÐÐÅÅÐò
+nameserver    æŒ‡å®šDNSæœåŠ¡å™¨çš„IPåœ°å€
+domain        å®šä¹‰æœ¬åœ°åŸŸåä¿¡æ¯
+search        å®šä¹‰åŸŸåçš„æœç´¢åˆ—è¡¨
+sortlist      å¯¹gethostbynameè¿”å›žçš„åœ°å€è¿›è¡ŒæŽ’åº
 
-µ«ÊÇ×î³£ÓÃµÄÅäÖÃ²ÎÊýÊÇnameserver£¬ÆäËûµÄ¿ÉÒÔ²»ÉèÖÃ£¬Õâ¸ö²ÎÊýÖ¸¶¨ÁËDNS·þÎñÆ÷µÄIPµØÖ·£¬Èç¹ûÉèÖÃ²»ÕýÈ·£¬¾ÍÎÞ·¨½øÐÐÕý³£µÄÓòÃû½âÎö¡£
-Ò»°ãÀ´Ëµ£¬ÍÆ¼öÉèÖÃ2¸öDNS·þÎñÆ÷£¬±ÈÈçÎÒÃÇÓÃgoogleµÄÃâ·ÑDNS·þÎñÆ÷£¬ÄÇÃ´¸ÃÎÄ¼þµÄÉèÖÃÄÚÈÝÈçÏÂ£º
+ä½†æ˜¯æœ€å¸¸ç”¨çš„é…ç½®å‚æ•°æ˜¯nameserverï¼Œå…¶ä»–çš„å¯ä»¥ä¸è®¾ç½®ï¼Œè¿™ä¸ªå‚æ•°æŒ‡å®šäº†DNSæœåŠ¡å™¨çš„IPåœ°å€ï¼Œå¦‚æžœè®¾ç½®ä¸æ­£ç¡®ï¼Œå°±æ— æ³•è¿›è¡Œæ­£å¸¸çš„åŸŸåè§£æžã€‚
+ä¸€èˆ¬æ¥è¯´ï¼ŒæŽ¨èè®¾ç½®2ä¸ªDNSæœåŠ¡å™¨ï¼Œæ¯”å¦‚æˆ‘ä»¬ç”¨googleçš„å…è´¹DNSæœåŠ¡å™¨ï¼Œé‚£ä¹ˆè¯¥æ–‡ä»¶çš„è®¾ç½®å†…å®¹å¦‚ä¸‹ï¼š
 
 nameserver 8.8.8.8
 nameserver 8.8.4.4
 
-Í¬Ñù£¬Õâ¸öÎÄ¼þÒ²ÊÇÎ£ÏÕµÄ£¬Èç¹û±»ÈË¶ñÒâ¸Ä³ÉÁËËû×Ô¼ºµÄDNS·þÎñÆ÷£¬Ëû¾Í¿ÉÒÔÎªËùÓûÎªµÄ¿ØÖÆÄãÍ¨¹ýÓòÃû·ÃÎÊµÄÃ¿¸öÄ¿µÄµØÁË£¬Õâ¾ÍÊÇ³£ËµµÄDNS½Ù³Ö¡£
+åŒæ ·ï¼Œè¿™ä¸ªæ–‡ä»¶ä¹Ÿæ˜¯å±é™©çš„ï¼Œå¦‚æžœè¢«äººæ¶æ„æ”¹æˆäº†ä»–è‡ªå·±çš„DNSæœåŠ¡å™¨ï¼Œä»–å°±å¯ä»¥ä¸ºæ‰€æ¬²ä¸ºçš„æŽ§åˆ¶ä½ é€šè¿‡åŸŸåè®¿é—®çš„æ¯ä¸ªç›®çš„åœ°äº†ï¼Œè¿™å°±æ˜¯å¸¸è¯´çš„DNSåŠ«æŒã€‚
 
-4. /etc/sysconfig/network, µäÐÍµÄÅäÖÃÈçÏÂ£º
+4. /etc/sysconfig/network, å…¸åž‹çš„é…ç½®å¦‚ä¸‹ï¼š
 
 NETWORKING=yes
 NETWORKING_IPV6=no
 HOSTNAME=butbueatiful
 GATEWAY=192.168.0.1
 
-²ÎÊý¼òÒª½âÊÍ£º
+å‚æ•°ç®€è¦è§£é‡Šï¼š
     
-NETWORK          ÉèÖÃÍøÂçÊÇ·ñÓÐÐ§£¬yesÓÐÐ§£¬noÎÞÐ§
-NETWORKING_IPV6  ÉèÖÃipv6ÍøÂçÊÇ·ñÓÐÐ§£¬yesÓÐÐ§£¬noÎÞÐ§
-HOSTNAME         ÉèÖÃ·þÎñÆ÷µÄÖ÷»úÃû£¬×îºÃºÍ/etc/hostsÀïÉèÖÃÒ»Ñù£¬·ñÔòÔÚÊ¹ÓÃÒ»Ð©³ÌÐòµÄÊ±ºò»áÓÐÎÊÌâ¡£
-GATEWAY          Ö¸¶¨Ä¬ÈÏÍø¹ØIP
+NETWORK          è®¾ç½®ç½‘ç»œæ˜¯å¦æœ‰æ•ˆï¼Œyesæœ‰æ•ˆï¼Œnoæ— æ•ˆ
+NETWORKING_IPV6  è®¾ç½®ipv6ç½‘ç»œæ˜¯å¦æœ‰æ•ˆï¼Œyesæœ‰æ•ˆï¼Œnoæ— æ•ˆ
+HOSTNAME         è®¾ç½®æœåŠ¡å™¨çš„ä¸»æœºåï¼Œæœ€å¥½å’Œ/etc/hostsé‡Œè®¾ç½®ä¸€æ ·ï¼Œå¦åˆ™åœ¨ä½¿ç”¨ä¸€äº›ç¨‹åºçš„æ—¶å€™ä¼šæœ‰é—®é¢˜ã€‚
+GATEWAY          æŒ‡å®šé»˜è®¤ç½‘å…³IP
 
-5. ifcfg-ethX, ÉèÖÃ¶ÔÓ¦Íø¿ÚµÄIPµÈÐÅÏ¢, ±ÈÈçµÚÒ»¸öÍø¿Ú, ÄÇÃ´¾ÍÊÇ/etc/sysconfig/network-scripts/ifcfg-eth0£¬ÅäÖÃÀý×Ó£º
+5. ifcfg-ethX, è®¾ç½®å¯¹åº”ç½‘å£çš„IPç­‰ä¿¡æ¯, æ¯”å¦‚ç¬¬ä¸€ä¸ªç½‘å£, é‚£ä¹ˆå°±æ˜¯/etc/sysconfig/network-scripts/ifcfg-eth0ï¼Œé…ç½®ä¾‹å­ï¼š
 
 DEVICE="eth0"
 BOOTPROTO="static"
@@ -117,151 +117,151 @@ IPADDR="192.168.0.100"
 NETMASK="255.255.255.0"
 ONBOOT="yes"
 
-²ÎÊý¼òÒª½âÊÍ£º
+å‚æ•°ç®€è¦è§£é‡Šï¼š
 
-DEVICE        Éè±¸Ãû£¬²»Òª×Ô¼ºÂÒ¸Ä£¬ºÍÎÄ¼þifcfg-ethXÀïµÄethXÒªÒ»ÖÂ
-BROADCAST     ¹ã²¥µØÖ·
-HWADDR        ÎïÀíµØÖ·£¬Õâ¸öÄã²»ÒªÂÒ¸Ä
-IPADDR        IPµØÖ·
-NETMASK       ×ÓÍøÑÚÂë
-ONBOOT        Æô¶¯»òÕßÖØÆôÍøÂçÊ±£¬ÊÇ·ñÆô¶¯¸ÃÉè±¸£¬yesÊÇÆô¶¯£¬noÊÇ²»Æô¶¯
-BOOTPROTO     ¿ª»úÐ­Òé£¬×î³£¼ûµÄÈý¸ö²ÎÊýÈçÏÂ£º
-              static(¾²Ì¬IP)
-              none(²»Ö¸¶¨,ÉèÖÃ¹Ì¶¨ipµÄÇé¿ö£¬Õâ¸öÒ²ÐÐ£¬µ«ÊÇÈç¹ûÒªÉè¶¨¶àÍø¿Ú°ó¶¨bondµÄÊ±ºò£¬±ØÐëÉè³Énone£©
-              dhcp(¶¯Ì¬»ñµÃIPÏà¹ØÐÅÏ¢£©
+DEVICE        è®¾å¤‡åï¼Œä¸è¦è‡ªå·±ä¹±æ”¹ï¼Œå’Œæ–‡ä»¶ifcfg-ethXé‡Œçš„ethXè¦ä¸€è‡´
+BROADCAST     å¹¿æ’­åœ°å€
+HWADDR        ç‰©ç†åœ°å€ï¼Œè¿™ä¸ªä½ ä¸è¦ä¹±æ”¹
+IPADDR        IPåœ°å€
+NETMASK       å­ç½‘æŽ©ç 
+ONBOOT        å¯åŠ¨æˆ–è€…é‡å¯ç½‘ç»œæ—¶ï¼Œæ˜¯å¦å¯åŠ¨è¯¥è®¾å¤‡ï¼Œyesæ˜¯å¯åŠ¨ï¼Œnoæ˜¯ä¸å¯åŠ¨
+BOOTPROTO     å¼€æœºåè®®ï¼Œæœ€å¸¸è§çš„ä¸‰ä¸ªå‚æ•°å¦‚ä¸‹ï¼š
+              static(é™æ€IP)
+              none(ä¸æŒ‡å®š,è®¾ç½®å›ºå®šipçš„æƒ…å†µï¼Œè¿™ä¸ªä¹Ÿè¡Œï¼Œä½†æ˜¯å¦‚æžœè¦è®¾å®šå¤šç½‘å£ç»‘å®šbondçš„æ—¶å€™ï¼Œå¿…é¡»è®¾æˆnoneï¼‰
+              dhcp(åŠ¨æ€èŽ·å¾—IPç›¸å…³ä¿¡æ¯ï¼‰
 
-6. route-ethX,±ÈÈçµÚÒ»¸öÍø¿Úeth0µÄÂ·ÓÉÐÅÏ¢,ÄÇÃ´¾ÍÊÇ/etc/sysconfig/network-scripts/route-eth0£º
+6. route-ethX,æ¯”å¦‚ç¬¬ä¸€ä¸ªç½‘å£eth0çš„è·¯ç”±ä¿¡æ¯,é‚£ä¹ˆå°±æ˜¯/etc/sysconfig/network-scripts/route-eth0ï¼š
 
-±ÈÈçÎÒÃÇÏÖÔÚÓÐÕâÑùÒ»¸öÐèÇó£¬Í¨¹ýeth0È¥ÍøÂç172.17.27.0/24²»×ßÄ¬ÈÏÂ·ÓÉ£¬ÐèÒª×ß192.168.0.254£¬ÄÇÃ´ÎÒÃÇµÚÒ»·´Ó¦£¬¿Ï¶¨ÊÇÓÃrouteÃüÁî×·¼ÓÂ·ÓÉÐÅÏ¢£º
+æ¯”å¦‚æˆ‘ä»¬çŽ°åœ¨æœ‰è¿™æ ·ä¸€ä¸ªéœ€æ±‚ï¼Œé€šè¿‡eth0åŽ»ç½‘ç»œ172.17.27.0/24ä¸èµ°é»˜è®¤è·¯ç”±ï¼Œéœ€è¦èµ°192.168.0.254ï¼Œé‚£ä¹ˆæˆ‘ä»¬ç¬¬ä¸€ååº”ï¼Œè‚¯å®šæ˜¯ç”¨routeå‘½ä»¤è¿½åŠ è·¯ç”±ä¿¡æ¯ï¼š
 [root@butbueatiful ~]# route add -net 172.17.27.0 netmask 255.255.255.0 gw 192.168.0.254 dev eth0
 
-¿ÉÊÇ£¬ÄãÃ»ÒâÊ¶µ½µÄÊÇ£¬ÕâÑùÖ»ÊÇ¶¯Ì¬×·¼ÓµÄ¶øÒÑ£¬ÖØÆôÍøÂçºó£¬Â·ÓÉÐÅÏ¢¾ÍÏûÊ§ÁË£¬ËùÒÔÐèÒªÉèÖÃ¾²Ì¬Â·ÓÉ£¬ÕâÊ±ºò¾ÍÒªÉèÖÃ/etc/sysconfig/network-scripts/route-eth0ÎÄ¼þÁË£¬Èç¹ûÃ»ÓÐ¸ÃÎÄ¼þ£¬Äã¾ÍÐÂ½¨Ò»¸ö£º
+å¯æ˜¯ï¼Œä½ æ²¡æ„è¯†åˆ°çš„æ˜¯ï¼Œè¿™æ ·åªæ˜¯åŠ¨æ€è¿½åŠ çš„è€Œå·²ï¼Œé‡å¯ç½‘ç»œåŽï¼Œè·¯ç”±ä¿¡æ¯å°±æ¶ˆå¤±äº†ï¼Œæ‰€ä»¥éœ€è¦è®¾ç½®é™æ€è·¯ç”±ï¼Œè¿™æ—¶å€™å°±è¦è®¾ç½®/etc/sysconfig/network-scripts/route-eth0æ–‡ä»¶äº†ï¼Œå¦‚æžœæ²¡æœ‰è¯¥æ–‡ä»¶ï¼Œä½ å°±æ–°å»ºä¸€ä¸ªï¼š
 [root@butbueatiful ~]# vi /etc/sysconfig/network-scripts/route-eth0
-#×·¼Ó
+#è¿½åŠ 
 172.17.27.0/24via 192.168.0.254
 
-ÕâÏÂ¼´Ê¹ÖØÆôÍøÂç£¬ÖØÆôÏµÍ³£¬¸ÃÂ·ÓÉÒ²»á×Ô¶¯¼ÓÔØ£¬µ±È»ÁË£¬Èç¹ûÄãÃ»ÓÐÕâÑùµÄÐèÒª£¬ÄÇÃ´Õâ¸öÎÄ¼þ¾ÍÃ»±ØÒª´´½¨ºÍÅäÖÃÁË¡£
+è¿™ä¸‹å³ä½¿é‡å¯ç½‘ç»œï¼Œé‡å¯ç³»ç»Ÿï¼Œè¯¥è·¯ç”±ä¹Ÿä¼šè‡ªåŠ¨åŠ è½½ï¼Œå½“ç„¶äº†ï¼Œå¦‚æžœä½ æ²¡æœ‰è¿™æ ·çš„éœ€è¦ï¼Œé‚£ä¹ˆè¿™ä¸ªæ–‡ä»¶å°±æ²¡å¿…è¦åˆ›å»ºå’Œé…ç½®äº†ã€‚
 
-¶þ¡¢³£ÓÃµÄÍøÂçÅäÖÃ
+äºŒã€å¸¸ç”¨çš„ç½‘ç»œé…ç½®
 
-°éËæ×ÅÊ±¼äµÄÍÆÒÆRed Hat¹«Ë¾ÍÆ³öÁËRHEL6.2£¬ËæºóCentOSÒ²½ôËæÆäºóÍË³öÁËCentOS6.2¡£ÐÂµÄÏµÍ³ÖÐ³§ÉÌ¼ÓÈëÁË´óÁ¿ÐéÄâ»¯¼°ÔÆ¼ÆËãµÄÔªËØ£¬Í¬Ê±¶ÔÓÚÏ¸½ÚµÄ¸Ä±äÒ²²»ÉÙ£¬ÕâÀïÎÒÃÇ½ö¶ÔÐÂÏµÍ³ÖÐµÄÍøÂç²ÎÊý×öÒÔÏê¾¡ËµÃ÷¡£
+ä¼´éšç€æ—¶é—´çš„æŽ¨ç§»Red Hatå…¬å¸æŽ¨å‡ºäº†RHEL6.2ï¼ŒéšåŽCentOSä¹Ÿç´§éšå…¶åŽé€€å‡ºäº†CentOS6.2ã€‚æ–°çš„ç³»ç»Ÿä¸­åŽ‚å•†åŠ å…¥äº†å¤§é‡è™šæ‹ŸåŒ–åŠäº‘è®¡ç®—çš„å…ƒç´ ï¼ŒåŒæ—¶å¯¹äºŽç»†èŠ‚çš„æ”¹å˜ä¹Ÿä¸å°‘ï¼Œè¿™é‡Œæˆ‘ä»¬ä»…å¯¹æ–°ç³»ç»Ÿä¸­çš„ç½‘ç»œå‚æ•°åšä»¥è¯¦å°½è¯´æ˜Žã€‚
 
-LinuxÖÐÍøÂç²ÎÊý´óÖÂ°üº¬ÒÔÏÂÄÚÈÝ£º
+Linuxä¸­ç½‘ç»œå‚æ•°å¤§è‡´åŒ…å«ä»¥ä¸‹å†…å®¹ï¼š
 
-IPµØÖ·
-×ÓÍøÑÚÂë
-Íø¹Ø
-DNS·þÎñÆ÷
-Ö÷»úÃû
+IPåœ°å€
+å­ç½‘æŽ©ç 
+ç½‘å…³
+DNSæœåŠ¡å™¨
+ä¸»æœºå
 
-ÀúÀ´LinuxÏµÍ³ÖÐÐÞ¸ÄÕâÐ©²ÎÊýµÄ·½Ê½Í¨³£ÓÐ£ºÃüÁî¡¢ÎÄ¼þÁ½ÖÖ¡£ÆäÖÐÍ¨¹ýÃüÁîÉèÖÃ¿ÉÒÔÁ¢¼´ÉúÐ§µ«ÖØÆôºó½«Ê§Ð§£¬Í¨¹ýÎÄ¼þÐÞ¸ÄÊµÏÖÓÀ¾ÃÉúÐ§£¬µ«²»»áÁ¢¼´ÉúÐ§¡£
+åŽ†æ¥Linuxç³»ç»Ÿä¸­ä¿®æ”¹è¿™äº›å‚æ•°çš„æ–¹å¼é€šå¸¸æœ‰ï¼šå‘½ä»¤ã€æ–‡ä»¶ä¸¤ç§ã€‚å…¶ä¸­é€šè¿‡å‘½ä»¤è®¾ç½®å¯ä»¥ç«‹å³ç”Ÿæ•ˆä½†é‡å¯åŽå°†å¤±æ•ˆï¼Œé€šè¿‡æ–‡ä»¶ä¿®æ”¹å®žçŽ°æ°¸ä¹…ç”Ÿæ•ˆï¼Œä½†ä¸ä¼šç«‹å³ç”Ÿæ•ˆã€‚
 
-Ê×ÏÈÎÒÃÇÀ´¿´¿´ÃüÁîµÄ·½Ê½£º
+é¦–å…ˆæˆ‘ä»¬æ¥çœ‹çœ‹å‘½ä»¤çš„æ–¹å¼ï¼š
 
-ifconfig£º²é¿´ÓëÉèÖÃIPµØÖ·¡¢×ÓÍøÑÚÂë
-hostname£º²é¿´ÓëÉèÖÃÖ÷»úÃû
-route£º     ²é¿´ÓëÉèÖÃÂ·ÓÉÐÅÏ¢£¨Ä¬ÈÏÍø¹ØµÈ£©
+ifconfigï¼šæŸ¥çœ‹ä¸Žè®¾ç½®IPåœ°å€ã€å­ç½‘æŽ©ç 
+hostnameï¼šæŸ¥çœ‹ä¸Žè®¾ç½®ä¸»æœºå
+routeï¼š     æŸ¥çœ‹ä¸Žè®¾ç½®è·¯ç”±ä¿¡æ¯ï¼ˆé»˜è®¤ç½‘å…³ç­‰ï¼‰
 
-Í¨¹ýÎÄ¼þµÄ·½Ê½ÐÞ¸Ä£º
+é€šè¿‡æ–‡ä»¶çš„æ–¹å¼ä¿®æ”¹ï¼š
 
-/etc/sysconfig/network-scripts/ifcfg-Éè±¸Ãû£¨Í¨³£Îªifcfg-eth0)
+/etc/sysconfig/network-scripts/ifcfg-è®¾å¤‡åï¼ˆé€šå¸¸ä¸ºifcfg-eth0)
 /etc/sysconfig/network
-/etc/resolv.confÎÄ¼þ£ºÉèÖÃDNS·þÎñÆ÷
+/etc/resolv.confæ–‡ä»¶ï¼šè®¾ç½®DNSæœåŠ¡å™¨
 
-ÒÔÉÏÖÖÖÖÕâÐ©·½Ê½¿ÉÒÔÍ¬Ê±ÔÚ5.0Óë6.0ÏµÍ³ÖÐÊµÏÖ£¬µ«6.0ÏµÍ³ºó¹Ù·½ÎÄµµÖÐÃèÊöËµ£ºifconfigÓërouteÊÇ·Ç³£³Â¾ÉµÄÃüÁî£¬È¡¶ø´úÖ®µÄÊÇipÃüÁî¡£
+ä»¥ä¸Šç§ç§è¿™äº›æ–¹å¼å¯ä»¥åŒæ—¶åœ¨5.0ä¸Ž6.0ç³»ç»Ÿä¸­å®žçŽ°ï¼Œä½†6.0ç³»ç»ŸåŽå®˜æ–¹æ–‡æ¡£ä¸­æè¿°è¯´ï¼šifconfigä¸Žrouteæ˜¯éžå¸¸é™ˆæ—§çš„å‘½ä»¤ï¼Œå–è€Œä»£ä¹‹çš„æ˜¯ipå‘½ä»¤ã€‚
 
-ÄÇÃ´ÎÒÃÇÏÈ¿´Ò»ÏÂÀÏµÄÃüÁîÊ¹ÓÃ·½Ê½£º
+é‚£ä¹ˆæˆ‘ä»¬å…ˆçœ‹ä¸€ä¸‹è€çš„å‘½ä»¤ä½¿ç”¨æ–¹å¼ï¼š
 *************************************************************************
-ifconfig    ½Ó¿Ú  Ñ¡Ïî|µØÖ·
+ifconfig    æŽ¥å£  é€‰é¡¹|åœ°å€
 
-# ifconfig  eth0  up          # ¿ªÆôeth0Íø¿¨
-# ifconfig  eth0  down        # ¹Ø±Õeth0Íø¿¨
-# ifconfig  eth0  -arp        # ¹Ø±Õeth0Íø¿¨arpÐ­Òé
-# ifconfig  eth0  promisc     # ¿ªÆôeth0Íø¿¨µÄ»ìºÏÄ£Ê½
-# ifconfig  eth0  mtu 1400    # ÉèÖÃeth0Íø¿¨µÄ×î´ó´«Êäµ¥ÔªÎª1400
-# ifconfig  eth0  192.168.0.2/24    # ÉèÖÃeth0Íø¿¨IPµØÖ·
-# ifconfig  eth0  192.168.0.2  netmask 255.255.255.0    # ¹¦ÄÜÍ¬ÉÏ
-
-*************************************************************************
-Ö÷»úÃû£º
-
-# hostname        # ²é¿´Ö÷»úÃû
-# hostname  butbueatiful.com    # ÉèÖÃÖ÷»úÃûÎªbutbueatiful.com
+# ifconfig  eth0  up          # å¼€å¯eth0ç½‘å¡
+# ifconfig  eth0  down        # å…³é—­eth0ç½‘å¡
+# ifconfig  eth0  -arp        # å…³é—­eth0ç½‘å¡arpåè®®
+# ifconfig  eth0  promisc     # å¼€å¯eth0ç½‘å¡çš„æ··åˆæ¨¡å¼
+# ifconfig  eth0  mtu 1400    # è®¾ç½®eth0ç½‘å¡çš„æœ€å¤§ä¼ è¾“å•å…ƒä¸º1400
+# ifconfig  eth0  192.168.0.2/24    # è®¾ç½®eth0ç½‘å¡IPåœ°å€
+# ifconfig  eth0  192.168.0.2  netmask 255.255.255.0    # åŠŸèƒ½åŒä¸Š
 
 *************************************************************************
-Íø¹ØÉèÖÃ£º
+ä¸»æœºåï¼š
+
+# hostname        # æŸ¥çœ‹ä¸»æœºå
+# hostname  butbueatiful.com    # è®¾ç½®ä¸»æœºåä¸ºbutbueatiful.com
+
+*************************************************************************
+ç½‘å…³è®¾ç½®ï¼š
 
 route  add [-net|-host] target [netmask] gw
 route  del [-net|-host] target [netmask] gw
 
-# route add  -net 192.168.3.0/24  gw  192.168.0.254    # ÉèÖÃµ½192.168.3.0Íø¶ÎµÄÍø¹ØÎª192.168.0.254
-# route add  -net 192.168.3.0 netmask 255.255.255.0  gw  192.168.0.254    # ¹¦ÄÜÍ¬ÉÏ
-# route add  -host 192.168.4.4  gw  192.168.0.254    # ÉèÖÃµ½192.168.4.4Ö÷»úµÄÍø¹ØÎª192.168.0.254
+# route add  -net 192.168.3.0/24  gw  192.168.0.254    # è®¾ç½®åˆ°192.168.3.0ç½‘æ®µçš„ç½‘å…³ä¸º192.168.0.254
+# route add  -net 192.168.3.0 netmask 255.255.255.0  gw  192.168.0.254    # åŠŸèƒ½åŒä¸Š
+# route add  -host 192.168.4.4  gw  192.168.0.254    # è®¾ç½®åˆ°192.168.4.4ä¸»æœºçš„ç½‘å…³ä¸º192.168.0.254
 #
-# route del  -net 192.168.3.0/24                        # É¾³ý192.168.3.0Íø¶ÎµÄÍø¹ØÐÅÏ¢
-# route del  -host 192.168.4.4                        # É¾³ý192.168.4.4Ö÷»úµÄÍø¹ØÐÅÏ¢
-# route add default gw  192.168.0.254                # ÉèÖÃÄ¬ÈÏÍø¹ØÎª192.168.0.254
-# route del default gw  192.168.0.254                # É¾³ýÄ¬ÈÏÍø¹ØÎª192.168.0.254
+# route del  -net 192.168.3.0/24                        # åˆ é™¤192.168.3.0ç½‘æ®µçš„ç½‘å…³ä¿¡æ¯
+# route del  -host 192.168.4.4                        # åˆ é™¤192.168.4.4ä¸»æœºçš„ç½‘å…³ä¿¡æ¯
+# route add default gw  192.168.0.254                # è®¾ç½®é»˜è®¤ç½‘å…³ä¸º192.168.0.254
+# route del default gw  192.168.0.254                # åˆ é™¤é»˜è®¤ç½‘å…³ä¸º192.168.0.254
 
 *************************************************************************
 
-¶øÈç½ñ¹Ù·½²»ÔÙÍÆ¼öÊ¹ÓÃÈç´Ë³Â¾ÉµÄÃüÁî¶øÍÆ¼öÊ¹ÓÃ ip Õâ¸öÃüÁî£¬ÒÔÏÂÎÒÃÇ¿´¿´ËüµÄÓÃ·¨£º
+è€Œå¦‚ä»Šå®˜æ–¹ä¸å†æŽ¨èä½¿ç”¨å¦‚æ­¤é™ˆæ—§çš„å‘½ä»¤è€ŒæŽ¨èä½¿ç”¨ ip è¿™ä¸ªå‘½ä»¤ï¼Œä»¥ä¸‹æˆ‘ä»¬çœ‹çœ‹å®ƒçš„ç”¨æ³•ï¼š
 
-ip  [Ñ¡Ïî]  ²Ù×÷¶ÔÏó{link|addr|route...}
+ip  [é€‰é¡¹]  æ“ä½œå¯¹è±¡{link|addr|route...}
 
-# ip link show                  # ÏÔÊ¾ÍøÂç½Ó¿ÚÐÅÏ¢
-# ip link set eth0 upi          # ¿ªÆôÍø¿¨
-# ip link set eth0 down         # ¹Ø±ÕÍø¿¨
-# ip link set eth0 promisc on   # ¿ªÆôÍø¿¨µÄ»ìºÏÄ£Ê½
-# ip link set eth0 promisc offi # ¹Ø±ÕÍø¿¨µÄ»ì¸öÄ£Ê½
-# ip link set eth0 txqueuelen 1200    # ÉèÖÃÍø¿¨¶ÓÁÐ³¤¶È
-# ip link set eth0 mtu 1400     # ÉèÖÃÍø¿¨×î´ó´«Êäµ¥Ôª
-# ip addr show                  # ÏÔÊ¾Íø¿¨IPÐÅÏ¢
-# ip addr add 192.168.0.1/24 dev eth0 # ÉèÖÃeth0Íø¿¨IPµØÖ·192.168.0.1
-# ip addr del 192.168.0.1/24 dev eth0 # É¾³ýeth0Íø¿¨IPµØÖ·
+# ip link show                  # æ˜¾ç¤ºç½‘ç»œæŽ¥å£ä¿¡æ¯
+# ip link set eth0 upi          # å¼€å¯ç½‘å¡
+# ip link set eth0 down         # å…³é—­ç½‘å¡
+# ip link set eth0 promisc on   # å¼€å¯ç½‘å¡çš„æ··åˆæ¨¡å¼
+# ip link set eth0 promisc offi # å…³é—­ç½‘å¡çš„æ··ä¸ªæ¨¡å¼
+# ip link set eth0 txqueuelen 1200    # è®¾ç½®ç½‘å¡é˜Ÿåˆ—é•¿åº¦
+# ip link set eth0 mtu 1400     # è®¾ç½®ç½‘å¡æœ€å¤§ä¼ è¾“å•å…ƒ
+# ip addr show                  # æ˜¾ç¤ºç½‘å¡IPä¿¡æ¯
+# ip addr add 192.168.0.1/24 dev eth0 # è®¾ç½®eth0ç½‘å¡IPåœ°å€192.168.0.1
+# ip addr del 192.168.0.1/24 dev eth0 # åˆ é™¤eth0ç½‘å¡IPåœ°å€
 
-# ip route list                 # ²é¿´Â·ÓÉÐÅÏ¢
-# ip route add 192.168.4.0/24  via  192.168.0.254 dev eth0 # ÉèÖÃ192.168.4.0Íø¶ÎµÄÍø¹ØÎª192.168.0.254,Êý¾Ý×ßeth0½Ó¿Ú
-# ip route add default via  192.168.0.254  dev eth0    # ÉèÖÃÄ¬ÈÏÍø¹ØÎª192.168.0.254
-# ip route del 192.168.4.0/24    # É¾³ý192.168.4.0Íø¶ÎµÄÍø¹Ø
-# ip route del default    # É¾³ýÄ¬ÈÏÂ·ÓÉ
+# ip route list                 # æŸ¥çœ‹è·¯ç”±ä¿¡æ¯
+# ip route add 192.168.4.0/24  via  192.168.0.254 dev eth0 # è®¾ç½®192.168.4.0ç½‘æ®µçš„ç½‘å…³ä¸º192.168.0.254,æ•°æ®èµ°eth0æŽ¥å£
+# ip route add default via  192.168.0.254  dev eth0    # è®¾ç½®é»˜è®¤ç½‘å…³ä¸º192.168.0.254
+# ip route del 192.168.4.0/24    # åˆ é™¤192.168.4.0ç½‘æ®µçš„ç½‘å…³
+# ip route del default    # åˆ é™¤é»˜è®¤è·¯ç”±
 
 **************************************************************
-½ÓÏÂÀ´ÔÙ¿´¿´Í¨¹ýÎÄ¼þÐÞ¸ÄÍøÂç²ÎÊý£º£¨CentOS6.2ÏµÍ³ÎªÀý£©
+æŽ¥ä¸‹æ¥å†çœ‹çœ‹é€šè¿‡æ–‡ä»¶ä¿®æ”¹ç½‘ç»œå‚æ•°ï¼šï¼ˆCentOS6.2ç³»ç»Ÿä¸ºä¾‹ï¼‰
 
 # cat  /etc/sysconfig/network-scripts/ifcfg-eth0   
 
-DEVICE="eth0"              Éè±¸Ãû
-NM_CONTROLLED="yes"        Éè±¸ÊÇ·ñ±»NetworkManager¹ÜÀí
-ONBOOT="no"                ¿ª»úÊÇ·ñÆô¶¯
-HWADDR="00:0C:29:59:E2:D3" Ó²¼þµØÖ·£¨MACµØÖ·£©
-TYPE=Ethernet              ÀàÐÍ
-BOOTPROTO=none             Æô¶¯Ð­Òé{none|dhcp}
-IPADDR=192.168.0.1         IPµØÖ·
-PREFIX=24                  ×ÓÍøÑÚÂë
-GATEWAY=192.168.0.254      Ä¬ÈÏÍø¹Ø
-DNS1=202.106.0.20          Ö÷DNS
-DOMAIN=202.106.46.151      ¸¨ÖúDNS
-UUID=5fb06bd0-0bb0-7ffb-45f1-d6edd65f3e03    Éè±¸UUID±àºÅ
+DEVICE="eth0"              è®¾å¤‡å
+NM_CONTROLLED="yes"        è®¾å¤‡æ˜¯å¦è¢«NetworkManagerç®¡ç†
+ONBOOT="no"                å¼€æœºæ˜¯å¦å¯åŠ¨
+HWADDR="00:0C:29:59:E2:D3" ç¡¬ä»¶åœ°å€ï¼ˆMACåœ°å€ï¼‰
+TYPE=Ethernet              ç±»åž‹
+BOOTPROTO=none             å¯åŠ¨åè®®{none|dhcp}
+IPADDR=192.168.0.1         IPåœ°å€
+PREFIX=24                  å­ç½‘æŽ©ç 
+GATEWAY=192.168.0.254      é»˜è®¤ç½‘å…³
+DNS1=202.106.0.20          ä¸»DNS
+DOMAIN=202.106.46.151      è¾…åŠ©DNS
+UUID=5fb06bd0-0bb0-7ffb-45f1-d6edd65f3e03    è®¾å¤‡UUIDç¼–å·
 
 **************************************************************
 # cat /etc/sysconfig/network
 
-HOSTNAME=butbueatiful.com    Ö÷»úÃû
+HOSTNAME=butbueatiful.com    ä¸»æœºå
 
 **************************************************************
 
-×¢Òâ£ºÔÚ5.0Ê±´úDNS·þÎñÆ÷Ð´ÔÚ /etc/resolv.conf ÎÄ¼þÖÐ£¬µ«µ½ÁË6.0Ê±´úDNS¿ÉÒÔÐ´ÔÚ/etc/resolv.confµ«ÊÇ´ËÊ±ÐèÒªÔÚ /etc/sysconfig/network-scripts/ifcfg-eth0 ÎÄ¼þÖÐÌí¼Ó PEERDNS=no ÅäÖÃ£¬²»È»Ã¿´ÎÖØÆôÍø¿¨¾Í»áÖØÐ´/etc/resolv.confÎÄ¼þµÄÄÚÈÝ£¬µ±È»ÁËÒ²¿ÉÒÔÖ±½ÓÐ´ÔÚ /etc/sysconfig/network-scripts/ifcfg-eth0 ÎÄ¼þÖÐ¡£
+æ³¨æ„ï¼šåœ¨5.0æ—¶ä»£DNSæœåŠ¡å™¨å†™åœ¨ /etc/resolv.conf æ–‡ä»¶ä¸­ï¼Œä½†åˆ°äº†6.0æ—¶ä»£DNSå¯ä»¥å†™åœ¨/etc/resolv.confä½†æ˜¯æ­¤æ—¶éœ€è¦åœ¨ /etc/sysconfig/network-scripts/ifcfg-eth0 æ–‡ä»¶ä¸­æ·»åŠ  PEERDNS=no é…ç½®ï¼Œä¸ç„¶æ¯æ¬¡é‡å¯ç½‘å¡å°±ä¼šé‡å†™/etc/resolv.confæ–‡ä»¶çš„å†…å®¹ï¼Œå½“ç„¶äº†ä¹Ÿå¯ä»¥ç›´æŽ¥å†™åœ¨ /etc/sysconfig/network-scripts/ifcfg-eth0 æ–‡ä»¶ä¸­ã€‚
 
 
-ºó¼Ç£º
+åŽè®°ï¼š
 
-1. ÅäÖÃ/etc/resolv.confgÖØÆô¶ªÊ§½â¾ö·½·¨£º
+1. é…ç½®/etc/resolv.confgé‡å¯ä¸¢å¤±è§£å†³æ–¹æ³•ï¼š
 
-Ò»ÖÖ·½·¨ÊÇ°Ñ PEERDNS ÉèÖÃÎª¡°no¡±¡£
+ä¸€ç§æ–¹æ³•æ˜¯æŠŠ PEERDNS è®¾ç½®ä¸ºâ€œnoâ€ã€‚
 
-ÕÒµ½Íø¿¨ÅäÖÃÎÄ¼þ£¬Î»ÖÃºÍ£º /etc/sysconfig/network-scripts/ifcfg-eth ÎÄ¼þÖÐ¼ÓÈëPEERDNS Ñ¡Ïî¡£¿ÉÒÔÊÇ 0, 1, 2µÈµÈ£¬´ú±í²»Í¬Íø¿¨µÄÅäÖÃÎÄ¼þ¡£ÀýÈç£¬ÏµÍ³ÉÏµÚÒ»ÕÅÍø¿¨ÊÇeth0µÄ»°£¬ÄÇËüµÄÅäÖÃÎÄ¼þ¾ÍÊÇ/etc/sysconfig/network-scripts/ifcfg-eth0 È»ºóÔÚÎÄ¼þÖÐ°Ñ PEERDNS ¸ÄÎª ¡®no¡¯.
-ÀýÈç£º
+æ‰¾åˆ°ç½‘å¡é…ç½®æ–‡ä»¶ï¼Œä½ç½®å’Œï¼š /etc/sysconfig/network-scripts/ifcfg-eth æ–‡ä»¶ä¸­åŠ å…¥PEERDNS é€‰é¡¹ã€‚å¯ä»¥æ˜¯ 0, 1, 2ç­‰ç­‰ï¼Œä»£è¡¨ä¸åŒç½‘å¡çš„é…ç½®æ–‡ä»¶ã€‚ä¾‹å¦‚ï¼Œç³»ç»Ÿä¸Šç¬¬ä¸€å¼ ç½‘å¡æ˜¯eth0çš„è¯ï¼Œé‚£å®ƒçš„é…ç½®æ–‡ä»¶å°±æ˜¯/etc/sysconfig/network-scripts/ifcfg-eth0 ç„¶åŽåœ¨æ–‡ä»¶ä¸­æŠŠ PEERDNS æ”¹ä¸º â€˜noâ€™.
+ä¾‹å¦‚ï¼š
 
 DEVICE=eth0
 BOOTPROTO=dhcp
@@ -269,258 +269,258 @@ ONBOOT=yes
 TYPE=Ethernet
 PEERDNS=no
 
-Õâ¸öÑ¡Ïî¿ÉÁî /etc/resolv.conf ÔÚÏµÍ³ÖØÆôºó²»»á±»ÖØÐ´¡£
+è¿™ä¸ªé€‰é¡¹å¯ä»¤ /etc/resolv.conf åœ¨ç³»ç»Ÿé‡å¯åŽä¸ä¼šè¢«é‡å†™ã€‚
 
-ÁíÒ»ÖÖ·½·¨ÊÇÔÚÕâ¸öÎÄ¼þÖÐÔö¼ÓDNS£º
-Èç£º
+å¦ä¸€ç§æ–¹æ³•æ˜¯åœ¨è¿™ä¸ªæ–‡ä»¶ä¸­å¢žåŠ DNSï¼š
+å¦‚ï¼š
 DNS1=127.0.0.1
 DNS2=8.8.8.8
 
-2. °²È«ÉèÖÃ
+2. å®‰å…¨è®¾ç½®
 
-   ÎÒÃÇÇ°ÃæËµÁË/etc/resolv.confºÍ/etc/hosts±»ÈË´Û¸ÄÁËµÄ»°, »áºÜÎ£ÏÕ, ÄÇÎÒÃÇÔÚÉèÖÃºÃ×Å2¸öÎÄ¼þºó, ×öÒ»ÏÂ´¦Àí, ÈÃÕâ2¸öÎÄ¼þÄ¬ÈÏ²»ÄÜÖ±½ÓÐÞ¸Ä, ¼´Ê¹rootÒ²²»ÐÐ, Ö´ÐÐÈçÏÂÃüÁî£º
+   æˆ‘ä»¬å‰é¢è¯´äº†/etc/resolv.confå’Œ/etc/hostsè¢«äººç¯¡æ”¹äº†çš„è¯, ä¼šå¾ˆå±é™©, é‚£æˆ‘ä»¬åœ¨è®¾ç½®å¥½ç€2ä¸ªæ–‡ä»¶åŽ, åšä¸€ä¸‹å¤„ç†, è®©è¿™2ä¸ªæ–‡ä»¶é»˜è®¤ä¸èƒ½ç›´æŽ¥ä¿®æ”¹, å³ä½¿rootä¹Ÿä¸è¡Œ, æ‰§è¡Œå¦‚ä¸‹å‘½ä»¤ï¼š
 [root@butbueatiful ~]# chattr +i /etc/{resolv.conf,hosts}
 
-Èç¹ûÎÒÃÇ×Ô¼ºÏëÐÞ¸ÄµÄÊ±ºò£¬Ö´ÐÐ£º   
+å¦‚æžœæˆ‘ä»¬è‡ªå·±æƒ³ä¿®æ”¹çš„æ—¶å€™ï¼Œæ‰§è¡Œï¼š   
 [root@butbueatiful ~]# chattr -i /etc/{resolv.conf,hosts}
 
-È»ºó¾Í¿ÉÒÔÐÞ¸ÄÁË£¬ÐÞ¸ÄÍêÁË±ðÍü¼Ç+i¡£
+ç„¶åŽå°±å¯ä»¥ä¿®æ”¹äº†ï¼Œä¿®æ”¹å®Œäº†åˆ«å¿˜è®°+iã€‚
 
-3. ÍøÂçÅÅ³ýË¼Â·
+3. ç½‘ç»œæŽ’é™¤æ€è·¯
 
-¼ì²éÅäÖÃÎÄ¼þÊÇ·ñÓÐ´íÎó(ÊéÐ´¼°Óï·¨´íÎóµÈ£©
-¼ì²é±¾»úÍøÂçÐ­ÒéÊÇ·ñÕýÈ·£º# ping -c 3 127.0.0.1
-¼ì²é±¾»úÍø¿¨Á´Â·ÊÇ·ñÕýÈ·£º# ping -c 3 192.168.0.1(±¾»úIPµØÖ·)
-¼ì²éÍø¹ØÊÇ·ñÕýÈ·£º       # ping -c 3 192.168.0.254(Íø¹ØIPµØÖ·)
-¼ì²éÍâ²¿Á¬Í¨ÐÔ£º        # ping -c 3 www.google.com.hk
-¼ì²éÓ²¼þ
+æ£€æŸ¥é…ç½®æ–‡ä»¶æ˜¯å¦æœ‰é”™è¯¯(ä¹¦å†™åŠè¯­æ³•é”™è¯¯ç­‰ï¼‰
+æ£€æŸ¥æœ¬æœºç½‘ç»œåè®®æ˜¯å¦æ­£ç¡®ï¼š# ping -c 3 127.0.0.1
+æ£€æŸ¥æœ¬æœºç½‘å¡é“¾è·¯æ˜¯å¦æ­£ç¡®ï¼š# ping -c 3 192.168.0.1(æœ¬æœºIPåœ°å€)
+æ£€æŸ¥ç½‘å…³æ˜¯å¦æ­£ç¡®ï¼š       # ping -c 3 192.168.0.254(ç½‘å…³IPåœ°å€)
+æ£€æŸ¥å¤–éƒ¨è¿žé€šæ€§ï¼š        # ping -c 3 www.google.com.hk
+æ£€æŸ¥ç¡¬ä»¶
 ***
 *** slackware
-netconfig ÃüÁîÅäÖÃeth0Íø¿¨
+netconfig å‘½ä»¤é…ç½®eth0ç½‘å¡
 
-±à¼­/etc/rc.d/rc.inet1.conf 
-#Config information for eth0: ×¢£ºÍø¿¨eth0µÄÅäÖÃ£» 
-IPADDR[0]="192.168.123.216" ×¢£ºÖ¸¶¨IPµØÖ·£»
-NETMASK[0]="255.255.255.0" ×¢£ºÖ¸¶¨ÑÚÂë£»
+ç¼–è¾‘/etc/rc.d/rc.inet1.conf 
+#Config information for eth0: æ³¨ï¼šç½‘å¡eth0çš„é…ç½®ï¼› 
+IPADDR[0]="192.168.123.216" æ³¨ï¼šæŒ‡å®šIPåœ°å€ï¼›
+NETMASK[0]="255.255.255.0" æ³¨ï¼šæŒ‡å®šæŽ©ç ï¼›
 USE_DHCP[0]="no" 
-#×¢£º²»ÓÃDHCP»ñµÃIP£»×¢£ºÔÚÕâÀïÐ´ÉÏyes£¬±íÊ¾ÓÃDHCP»ñµÃIP£» 
+#æ³¨ï¼šä¸ç”¨DHCPèŽ·å¾—IPï¼›æ³¨ï¼šåœ¨è¿™é‡Œå†™ä¸Šyesï¼Œè¡¨ç¤ºç”¨DHCPèŽ·å¾—IPï¼› 
 DHCP_HOSTNAME[0]="linuxsir01" 
-#×¢£ºDNS·þÎñÆ÷Ö÷»úÃû£¬Ò²¿ÉÒÔÓÃIPÀ´Ö¸¶¨DNS·þÎñÆ÷£»
+#æ³¨ï¼šDNSæœåŠ¡å™¨ä¸»æœºåï¼Œä¹Ÿå¯ä»¥ç”¨IPæ¥æŒ‡å®šDNSæœåŠ¡å™¨ï¼›
 #Default gateway IP address:
-GATEWAY="192.168.123.254" ×¢£ºÖ¸¶¨Íø¹Ø£»
+GATEWAY="192.168.123.254" æ³¨ï¼šæŒ‡å®šç½‘å…³ï¼›
 
-ÔËÐÐ/etc/rc.d/rc.inet1¼¤»îÍø¿¨ 
+è¿è¡Œ/etc/rc.d/rc.inet1æ¿€æ´»ç½‘å¡ 
 *** ubuntu
-/etc/NetworkManager/NetworkManager.conf  ÖÐmanaged=false ½ûÓÃNM.
+/etc/NetworkManager/NetworkManager.conf  ä¸­managed=false ç¦ç”¨NM.
 
-UbuntuÏµÍ³½øÐÐÍøÂçÅäÖÃÓÐµÄÊ±ºòÓÃÍ¼ÐÎ½çÃæ²»Æð×÷ÓÃ£¬ÕâÖÖÇé¿öÏÂ¿ÉÒÔÖ±½ÓÐÞ¸ÄÄ³Ð©Æô¶¯½Å±¾»òÅäÖÃÎÄ¼þ
-UbuntuÏµÍ³½øÐÐÍøÂçÅäÖÃÉæ¼°µ½¼¸¸öÅäÖÃÎÄ¼þ1./etc/network/interfaces 2./etc/resolv.conf
-²Ù×Ý²½Öè£º
-1.´ò¿ªubuntuµÄ/etc/network/interfacesÎÄ¼þÄ¬ÈÏµÄÄÚÈÝÈçÏÂ£º
+Ubuntuç³»ç»Ÿè¿›è¡Œç½‘ç»œé…ç½®æœ‰çš„æ—¶å€™ç”¨å›¾å½¢ç•Œé¢ä¸èµ·ä½œç”¨ï¼Œè¿™ç§æƒ…å†µä¸‹å¯ä»¥ç›´æŽ¥ä¿®æ”¹æŸäº›å¯åŠ¨è„šæœ¬æˆ–é…ç½®æ–‡ä»¶
+Ubuntuç³»ç»Ÿè¿›è¡Œç½‘ç»œé…ç½®æ¶‰åŠåˆ°å‡ ä¸ªé…ç½®æ–‡ä»¶1./etc/network/interfaces 2./etc/resolv.conf
+æ“çºµæ­¥éª¤ï¼š
+1.æ‰“å¼€ubuntuçš„/etc/network/interfacesæ–‡ä»¶é»˜è®¤çš„å†…å®¹å¦‚ä¸‹ï¼š
 auto lo
 iface lo inet loopback
-¶¯Ì¬»ñÈ¡µÄÅäÖÃ·½·¨£º
+åŠ¨æ€èŽ·å–çš„é…ç½®æ–¹æ³•ï¼š
 auto eth0
 iface eth0 inet dhcp
-¾²Ì¬·ÖÅäµÄÅäÖÃ·½·¨£º
+é™æ€åˆ†é…çš„é…ç½®æ–¹æ³•ï¼š
 auto eth0
 iface eth0 inet static
 address 192.168.0.1
 netmask  255.255.255.0
 gateway  192.168.0.1
-¸ù¾ÝÅäÖÃÒªÇó£¨ÊÇ¶¯Ì¬·ÖÅä»¹ÊÇ×Ô¶¯»ñÈ¡£©ÐÞ¸Ä¸ÃÅäÖÃÎÄ¼þ±£´æ¡£
+æ ¹æ®é…ç½®è¦æ±‚ï¼ˆæ˜¯åŠ¨æ€åˆ†é…è¿˜æ˜¯è‡ªåŠ¨èŽ·å–ï¼‰ä¿®æ”¹è¯¥é…ç½®æ–‡ä»¶ä¿å­˜ã€‚
  
-2.Ìí¼ÓÓòÃû·þÎñÆ÷£º´ò¿ª/etc/resolv.confÎÄ¼þ
- Ìí¼ÓÕâÐÐ:nameserver 202.99.166.4
+2.æ·»åŠ åŸŸåæœåŠ¡å™¨ï¼šæ‰“å¼€/etc/resolv.confæ–‡ä»¶
+ æ·»åŠ è¿™è¡Œ:nameserver 202.99.166.4
  
-3.ÖØÆôÏÂÍøÂç
-$/etc/init.d/networking restart(ÕâÌõÃüÁîÊÇÖØÆôÍø¿¨)
-»òÕß
+3.é‡å¯ä¸‹ç½‘ç»œ
+$/etc/init.d/networking restart(è¿™æ¡å‘½ä»¤æ˜¯é‡å¯ç½‘å¡)
+æˆ–è€…
 $ifdown eth0
-$ifup   eth0£¨ÕâÁ½ÌõÃüÁîÊÇÓÐÕë¶ÔÐÔµÄÖØÆôÄ³¸öÍøÂç½Ó¿Ú£¬ÒòÎªÒ»¸öÏµÍ³¿ÉÄÜÓÐ¶à¸öÍøÂç½Ó¿Ú£©
+$ifup   eth0ï¼ˆè¿™ä¸¤æ¡å‘½ä»¤æ˜¯æœ‰é’ˆå¯¹æ€§çš„é‡å¯æŸä¸ªç½‘ç»œæŽ¥å£ï¼Œå› ä¸ºä¸€ä¸ªç³»ç»Ÿå¯èƒ½æœ‰å¤šä¸ªç½‘ç»œæŽ¥å£ï¼‰
  
-4.²é¿´ÍøÂçÅäÖÃµÄ²ÎÊýÊÇ²»ÊÇÕýÈ·£¨Ã¿½øÐÐÒ»´Î²Ù×÷¶¼¿ÉÒÔ²é¿´Ò»ÏÂÊÇ²»ÊÇÐÞ¸ÄÁËÍøÂçÅäÖÃ£©
+4.æŸ¥çœ‹ç½‘ç»œé…ç½®çš„å‚æ•°æ˜¯ä¸æ˜¯æ­£ç¡®ï¼ˆæ¯è¿›è¡Œä¸€æ¬¡æ“ä½œéƒ½å¯ä»¥æŸ¥çœ‹ä¸€ä¸‹æ˜¯ä¸æ˜¯ä¿®æ”¹äº†ç½‘ç»œé…ç½®ï¼‰
 $ifconfig
  
-5.¿´¿´ÊÇ²»ÊÇÄÜ¹»pingÍ¨
-ping²»Í¨Íø¹ØËµÃ÷ÍøÂçÅäÖÃÓÐÎÊÌâ ping²»Í¨ÓòÃûËµÃ÷dnsÓÐÎÊÌâ
+5.çœ‹çœ‹æ˜¯ä¸æ˜¯èƒ½å¤Ÿpingé€š
+pingä¸é€šç½‘å…³è¯´æ˜Žç½‘ç»œé…ç½®æœ‰é—®é¢˜ pingä¸é€šåŸŸåè¯´æ˜Ždnsæœ‰é—®é¢˜
  
-ÓÐÐ©Ê±ºòÐèÒªÐÞ¸ÄÍø¿¨µÄÓ²¼þµØÖ·£º
-·½·¨Ò»£º
+æœ‰äº›æ—¶å€™éœ€è¦ä¿®æ”¹ç½‘å¡çš„ç¡¬ä»¶åœ°å€ï¼š
+æ–¹æ³•ä¸€ï¼š
 $ifconfig eth0 hw ether XX:XX:XX:XX:XX:XX
-$/etc/init.d/networking restart(ÖØÆôÍø¿¨)
-·½·¨¶þ£º
-ÒÔÉÏÖ»ÊÇÔÝÊ±µÄÐÞ¸ÄÓ²¼þµØÖ·ÒªÓÀ¾ÃÐÞ¸Ä£¬Ö±½Ó±à¼­ /etc/network/interfaces ÎÄ¼þ£¬ÔÚ iface eth0 inet static ºóÃæÌí¼ÓÒ»ÐÐ£º pre-up ifconfig eth0 hw ether xx:xx:xx:xx:xx:xx£¨Òª¸Ä³ÉµÄMAC£©
-$ sudo /etc/init.d/networking restart£¨ÖØÆôÍø¿¨£©
+$/etc/init.d/networking restart(é‡å¯ç½‘å¡)
+æ–¹æ³•äºŒï¼š
+ä»¥ä¸Šåªæ˜¯æš‚æ—¶çš„ä¿®æ”¹ç¡¬ä»¶åœ°å€è¦æ°¸ä¹…ä¿®æ”¹ï¼Œç›´æŽ¥ç¼–è¾‘ /etc/network/interfaces æ–‡ä»¶ï¼Œåœ¨ iface eth0 inet static åŽé¢æ·»åŠ ä¸€è¡Œï¼š pre-up ifconfig eth0 hw ether xx:xx:xx:xx:xx:xxï¼ˆè¦æ”¹æˆçš„MACï¼‰
+$ sudo /etc/init.d/networking restartï¼ˆé‡å¯ç½‘å¡ï¼‰
 * Software
 *** Vi find & replace
-**** Ò»¡¢²éÕÒ
+**** ä¸€ã€æŸ¥æ‰¾
 
-²éÕÒÃüÁî
+æŸ¥æ‰¾å‘½ä»¤
 
-/pattern<Enter> £ºÏòÏÂ²éÕÒpatternÆ¥Åä×Ö·û´®
-?pattern<Enter>£ºÏòÉÏ²éÕÒpatternÆ¥Åä×Ö·û´®
-Ê¹ÓÃÁË²éÕÒÃüÁîÖ®ºó£¬Ê¹ÓÃÈçÏÂÁ½¸ö¼ü¿ìËÙ²éÕÒ£º
-n£º°´ÕÕÍ¬Ò»·½Ïò¼ÌÐø²éÕÒ
-N£º°´ÕÕ·´·½Ïò²éÕÒ
+/pattern<Enter> ï¼šå‘ä¸‹æŸ¥æ‰¾patternåŒ¹é…å­—ç¬¦ä¸²
+?pattern<Enter>ï¼šå‘ä¸ŠæŸ¥æ‰¾patternåŒ¹é…å­—ç¬¦ä¸²
+ä½¿ç”¨äº†æŸ¥æ‰¾å‘½ä»¤ä¹‹åŽï¼Œä½¿ç”¨å¦‚ä¸‹ä¸¤ä¸ªé”®å¿«é€ŸæŸ¥æ‰¾ï¼š
+nï¼šæŒ‰ç…§åŒä¸€æ–¹å‘ç»§ç»­æŸ¥æ‰¾
+Nï¼šæŒ‰ç…§åæ–¹å‘æŸ¥æ‰¾
 
-×Ö·û´®Æ¥Åä
+å­—ç¬¦ä¸²åŒ¹é…
 
-patternÊÇÐèÒªÆ¥ÅäµÄ×Ö·û´®£¬ÀýÈç£º
+patternæ˜¯éœ€è¦åŒ¹é…çš„å­—ç¬¦ä¸²ï¼Œä¾‹å¦‚ï¼š
 
-1:  /abc<Enter>      #²éÕÒabc
+1:  /abc<Enter>      #æŸ¥æ‰¾abc
 
-2:  / abc <Enter>    #²éÕÒabcµ¥´Ê£¨×¢ÒâÇ°ºóµÄ¿Õ¸ñ£© 
+2:  / abc <Enter>    #æŸ¥æ‰¾abcå•è¯ï¼ˆæ³¨æ„å‰åŽçš„ç©ºæ ¼ï¼‰ 
 
-  ³ý´ËÖ®Íâ£¬pattern»¹¿ÉÒÔÊ¹ÓÃÒ»Ð©ÌØÊâ×Ö·û£¬°üÀ¨£¨/¡¢^¡¢$¡¢*¡¢.£©£¬ÆäÖÐÇ°Èý¸öÕâÁ½¸öÊÇviÓëvimÍ¨ÓÃµÄ£¬¡°/¡±Îª×ªÒå×Ö·û¡£
+  é™¤æ­¤ä¹‹å¤–ï¼Œpatternè¿˜å¯ä»¥ä½¿ç”¨ä¸€äº›ç‰¹æ®Šå­—ç¬¦ï¼ŒåŒ…æ‹¬ï¼ˆ/ã€^ã€$ã€*ã€.ï¼‰ï¼Œå…¶ä¸­å‰ä¸‰ä¸ªè¿™ä¸¤ä¸ªæ˜¯viä¸Žvimé€šç”¨çš„ï¼Œâ€œ/â€ä¸ºè½¬ä¹‰å­—ç¬¦ã€‚
 
-1:  /^abc<Enter>    #²éÕÒÒÔabc¿ªÊ¼µÄÐÐ 
+1:  /^abc<Enter>    #æŸ¥æ‰¾ä»¥abcå¼€å§‹çš„è¡Œ 
 
-2:  /test$<Enter>    #²éÕÒÒÔabc½áÊøµÄÐÐ 
+2:  /test$<Enter>    #æŸ¥æ‰¾ä»¥abcç»“æŸçš„è¡Œ 
 
-3:  //^test<Enter>    #²éÕÒ^tabc×Ö·û´®
+3:  //^test<Enter>    #æŸ¥æ‰¾^tabcå­—ç¬¦ä¸²
 
-**** ¶þ¡¢Ìæ»»
+**** äºŒã€æ›¿æ¢
 
-»ù±¾Ìæ»»
+åŸºæœ¬æ›¿æ¢
 
-1:  :s/vivian/sky/         #Ìæ»»µ±Ç°ÐÐµÚÒ»¸ö vivian Îª sky
+1:  :s/vivian/sky/         #æ›¿æ¢å½“å‰è¡Œç¬¬ä¸€ä¸ª vivian ä¸º sky
 
-2:  :s/vivian/sky/g     #Ìæ»»µ±Ç°ÐÐËùÓÐ vivian Îª sky
+2:  :s/vivian/sky/g     #æ›¿æ¢å½“å‰è¡Œæ‰€æœ‰ vivian ä¸º sky
 
-3:  :n,$s/vivian/sky/     #Ìæ»»µÚ n ÐÐ¿ªÊ¼µ½×îºóÒ»ÐÐÖÐÃ¿Ò»ÐÐµÄµÚÒ»¸ö vivian Îª sky
+3:  :n,$s/vivian/sky/     #æ›¿æ¢ç¬¬ n è¡Œå¼€å§‹åˆ°æœ€åŽä¸€è¡Œä¸­æ¯ä¸€è¡Œçš„ç¬¬ä¸€ä¸ª vivian ä¸º sky
 
-4:  :n,$s/vivian/sky/g     #Ìæ»»µÚ n ÐÐ¿ªÊ¼µ½×îºóÒ»ÐÐÖÐÃ¿Ò»ÐÐËùÓÐ vivian Îª sky
+4:  :n,$s/vivian/sky/g     #æ›¿æ¢ç¬¬ n è¡Œå¼€å§‹åˆ°æœ€åŽä¸€è¡Œä¸­æ¯ä¸€è¡Œæ‰€æœ‰ vivian ä¸º sky
 
-5:  £¨n ÎªÊý×Ö£¬Èô n Îª .£¬±íÊ¾´Óµ±Ç°ÐÐ¿ªÊ¼µ½×îºóÒ»ÐÐ£©
+5:  ï¼ˆn ä¸ºæ•°å­—ï¼Œè‹¥ n ä¸º .ï¼Œè¡¨ç¤ºä»Žå½“å‰è¡Œå¼€å§‹åˆ°æœ€åŽä¸€è¡Œï¼‰
 
 6:  
 
-7:  :%s/vivian/sky/        #£¨µÈÍ¬ÓÚ :g/vivian/s//sky/£© Ìæ»»Ã¿Ò»ÐÐµÄµÚÒ»¸ö vivian Îª sky
+7:  :%s/vivian/sky/        #ï¼ˆç­‰åŒäºŽ :g/vivian/s//sky/ï¼‰ æ›¿æ¢æ¯ä¸€è¡Œçš„ç¬¬ä¸€ä¸ª vivian ä¸º sky
 
-8:  :%s/vivian/sky/g    #£¨µÈÍ¬ÓÚ :g/vivian/s//sky/g£© Ìæ»»Ã¿Ò»ÐÐÖÐËùÓÐ vivian Îª sky
+8:  :%s/vivian/sky/g    #ï¼ˆç­‰åŒäºŽ :g/vivian/s//sky/gï¼‰ æ›¿æ¢æ¯ä¸€è¡Œä¸­æ‰€æœ‰ vivian ä¸º sky
 
-  ¿ÉÒÔÊ¹ÓÃ #»ò+ ×÷Îª·Ö¸ô·û£¬´ËÊ±ÖÐ¼ä³öÏÖµÄ / ²»»á×÷Îª·Ö¸ô·û
+  å¯ä»¥ä½¿ç”¨ #æˆ–+ ä½œä¸ºåˆ†éš”ç¬¦ï¼Œæ­¤æ—¶ä¸­é—´å‡ºçŽ°çš„ / ä¸ä¼šä½œä¸ºåˆ†éš”ç¬¦
 
-1:  :s#vivian/#sky/#         Ìæ»»µ±Ç°ÐÐµÚÒ»¸ö vivian/ Îª sky/
+1:  :s#vivian/#sky/#         æ›¿æ¢å½“å‰è¡Œç¬¬ä¸€ä¸ª vivian/ ä¸º sky/
 
-2:  :%s+/oradata/apras/+/user01/apras1+ £¨
+2:  :%s+/oradata/apras/+/user01/apras1+ ï¼ˆ
 
-3:  Ê¹ÓÃ+ À´ Ìæ»» / £©£º /oradata/apras/Ìæ»»³É/user01/apras1/
+3:  ä½¿ç”¨+ æ¥ æ›¿æ¢ / ï¼‰ï¼š /oradata/apras/æ›¿æ¢æˆ/user01/apras1/
 
  
-É¾³ýÎÄ±¾ÖÐµÄ^M
+åˆ é™¤æ–‡æœ¬ä¸­çš„^M
 
-ÎÊÌâÃèÊö£º¶ÔÓÚ»»ÐÐ£¬windowÏÂÓÃ»Ø³µ»»ÐÐ£¨0A0D£©À´±íÊ¾£¬linuxÏÂÊÇ»Ø³µ£¨0A£©À´±íÊ¾¡£ÕâÑù£¬½«windowÉÏµÄÎÄ¼þ¿½µ½unixÉÏÓÃÊ±£¬×Ü»áÓÐ¸ö^M£¬ÇëÐ´¸öÓÃÔÚunixÏÂµÄ¹ýÂËwindowsÎÄ¼þµÄ»»ÐÐ·û£¨0D£©µÄshell»òc³ÌÐò¡£
-Ê¹ÓÃÃüÁî£ºcat filename1 | tr -d ¡°^V^M¡± > newfile;
-Ê¹ÓÃÃüÁî£ºsed -e ¡°s/^V^M//¡± filename > outputfilename
-ÐèÒª×¢ÒâµÄÊÇÔÚ1¡¢2Á½ÖÖ·½·¨ÖÐ£¬^VºÍ^MÖ¸µÄÊÇCtrl+VºÍCtrl+M¡£Äã±ØÐëÒªÊÖ¹¤½øÐÐÊäÈë£¬¶ø²»ÊÇÕ³Ìù¡£
-ÔÚviÖÐ´¦Àí£ºÊ×ÏÈÊ¹ÓÃvi´ò¿ªÎÄ¼þ£¬È»ºó°´ESC¼ü£¬½Ó×ÅÊäÈëÃüÁî£º
+é—®é¢˜æè¿°ï¼šå¯¹äºŽæ¢è¡Œï¼Œwindowä¸‹ç”¨å›žè½¦æ¢è¡Œï¼ˆ0A0Dï¼‰æ¥è¡¨ç¤ºï¼Œlinuxä¸‹æ˜¯å›žè½¦ï¼ˆ0Aï¼‰æ¥è¡¨ç¤ºã€‚è¿™æ ·ï¼Œå°†windowä¸Šçš„æ–‡ä»¶æ‹·åˆ°unixä¸Šç”¨æ—¶ï¼Œæ€»ä¼šæœ‰ä¸ª^Mï¼Œè¯·å†™ä¸ªç”¨åœ¨unixä¸‹çš„è¿‡æ»¤windowsæ–‡ä»¶çš„æ¢è¡Œç¬¦ï¼ˆ0Dï¼‰çš„shellæˆ–cç¨‹åºã€‚
+ä½¿ç”¨å‘½ä»¤ï¼šcat filename1 | tr -d â€œ^V^Mâ€ > newfile;
+ä½¿ç”¨å‘½ä»¤ï¼šsed -e â€œs/^V^M//â€ filename > outputfilename
+éœ€è¦æ³¨æ„çš„æ˜¯åœ¨1ã€2ä¸¤ç§æ–¹æ³•ä¸­ï¼Œ^Vå’Œ^MæŒ‡çš„æ˜¯Ctrl+Vå’ŒCtrl+Mã€‚ä½ å¿…é¡»è¦æ‰‹å·¥è¿›è¡Œè¾“å…¥ï¼Œè€Œä¸æ˜¯ç²˜è´´ã€‚
+åœ¨viä¸­å¤„ç†ï¼šé¦–å…ˆä½¿ç”¨viæ‰“å¼€æ–‡ä»¶ï¼Œç„¶åŽæŒ‰ESCé”®ï¼ŒæŽ¥ç€è¾“å…¥å‘½ä»¤ï¼š
 
 1:  :%s/^V^M//
 
 2:  :%s/^M$//g
 
-Èç¹ûÉÏÊö·½·¨ÎÞÓÃ£¬ÔòÕýÈ·µÄ½â¾ö°ì·¨ÊÇ£º
+å¦‚æžœä¸Šè¿°æ–¹æ³•æ— ç”¨ï¼Œåˆ™æ­£ç¡®çš„è§£å†³åŠžæ³•æ˜¯ï¼š
 
-1:  tr -d ¡°/r¡± < src >dest
+1:  tr -d â€œ/râ€ < src >dest
 
-2:  tr -d ¡°/015¡å dest
+2:  tr -d â€œ/015â€³ dest
 
 3:  
 
 4:  strings A>B
 
-**** Èý¡¢¼òµ¥µÄvimÕýÔò±í´ïÊ½¹æÔò
+**** ä¸‰ã€ç®€å•çš„vimæ­£åˆ™è¡¨è¾¾å¼è§„åˆ™
 
-ÔÚvimÖÐÓÐËÄÖÖ±í´ïÊ½¹æÔò£º
-magic(/m)£º³ýÁË$.*^Ö®ÍâÆäËûÔª×Ö·û¶¼Òª¼Ó·´Ð±¸Ü
-nomagic(/M)£º³ýÁË$^Ö®ÍâÆäËûÔª×Ö·û¶¼Òª¼Ó·´Ð±¸Ü
-/v£¨¼´ very magic Ö®Òâ£©£ºÈÎºÎÔª×Ö·û¶¼²»ÓÃ¼Ó·´Ð±¸Ü
-/V£¨¼´ very nomagic Ö®Òâ£©£ºÈÎºÎÔª×Ö·û¶¼±ØÐë¼Ó·´Ð±¸Ü
+åœ¨vimä¸­æœ‰å››ç§è¡¨è¾¾å¼è§„åˆ™ï¼š
+magic(/m)ï¼šé™¤äº†$.*^ä¹‹å¤–å…¶ä»–å…ƒå­—ç¬¦éƒ½è¦åŠ åæ–œæ 
+nomagic(/M)ï¼šé™¤äº†$^ä¹‹å¤–å…¶ä»–å…ƒå­—ç¬¦éƒ½è¦åŠ åæ–œæ 
+/vï¼ˆå³ very magic ä¹‹æ„ï¼‰ï¼šä»»ä½•å…ƒå­—ç¬¦éƒ½ä¸ç”¨åŠ åæ–œæ 
+/Vï¼ˆå³ very nomagic ä¹‹æ„ï¼‰ï¼šä»»ä½•å…ƒå­—ç¬¦éƒ½å¿…é¡»åŠ åæ–œæ 
 
-vimÄ¬ÈÏÊ¹ÓÃmagicÉèÖÃ£¬Õâ¸öÉèÖÃÒ²¿ÉÒÔÔÚÕýÔò±í´ïÊ½ÖÐÍ¨¹ý /m /M /v /V¿ª¹ØÁÙÊ±ÇÐ»»¡£ÀýÈç£º
+vimé»˜è®¤ä½¿ç”¨magicè®¾ç½®ï¼Œè¿™ä¸ªè®¾ç½®ä¹Ÿå¯ä»¥åœ¨æ­£åˆ™è¡¨è¾¾å¼ä¸­é€šè¿‡ /m /M /v /Vå¼€å…³ä¸´æ—¶åˆ‡æ¢ã€‚ä¾‹å¦‚ï¼š
 
-1:  //m.*          # ²éÕÒÈÎÒâ×Ö·û´®
+1:  //m.*          # æŸ¥æ‰¾ä»»æ„å­—ç¬¦ä¸²
 
-2:  //M.*          # ²éÕÒ×Ö·û´® .* £¨µãºÅºóÃæ¸ú¸öÐÇºÅ£©
+2:  //M.*          # æŸ¥æ‰¾å­—ç¬¦ä¸² .* ï¼ˆç‚¹å·åŽé¢è·Ÿä¸ªæ˜Ÿå·ï¼‰
 
 3:  
 
-4:  //v(a.c){3}$   # ²éÕÒÐÐÎ²µÄabcaccadc
+4:  //v(a.c){3}$   # æŸ¥æ‰¾è¡Œå°¾çš„abcaccadc
 
-5:  //m(a.c){3}$   # ²éÕÒÐÐÎ²µÄ(abc){3}
+5:  //m(a.c){3}$   # æŸ¥æ‰¾è¡Œå°¾çš„(abc){3}
 
-6:  //M(a.c){3}$   # ²éÕÒÐÐÎ²µÄ(a.c){3}
+6:  //M(a.c){3}$   # æŸ¥æ‰¾è¡Œå°¾çš„(a.c){3}
 
-7:  //V(a.c){3}$   # ²éÕÒÈÎÒâÎ»ÖÃµÄ(a.c){3}$
+7:  //V(a.c){3}$   # æŸ¥æ‰¾ä»»æ„ä½ç½®çš„(a.c){3}$
 
-ÍÆ¼öÊ¹ÓÃÄ¬ÈÏµÄmagicÉèÖÃ£¬ÔÚÕâÖÖÇé¿öÏÂ£¬³£ÓÃµÄÆ¥ÅäÓÐ£º
+æŽ¨èä½¿ç”¨é»˜è®¤çš„magicè®¾ç½®ï¼Œåœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œå¸¸ç”¨çš„åŒ¹é…æœ‰ï¼š
 #+BEGIN_SRC sh
 
- 1:  //<abc          #²éÕÒÒÔtest¿ªÊ¼µÄ×Ö·û´® 
+ 1:  //<abc          #æŸ¥æ‰¾ä»¥testå¼€å§‹çš„å­—ç¬¦ä¸² 
 
- 2:  /abc/>          #²éÕÒÒÔtest½áÊøµÄ×Ö·û´® 
+ 2:  /abc/>          #æŸ¥æ‰¾ä»¥testç»“æŸçš„å­—ç¬¦ä¸² 
 
  3:  
 
- 4:  $       Æ¥ÅäÒ»ÐÐµÄ½áÊø
+ 4:  $       åŒ¹é…ä¸€è¡Œçš„ç»“æŸ
 
- 5:  ^       Æ¥ÅäÒ»ÐÐµÄ¿ªÊ¼
+ 5:  ^       åŒ¹é…ä¸€è¡Œçš„å¼€å§‹
 
- 6:  /<      Æ¥ÅäÒ»¸öµ¥´ÊµÄ¿ªÊ¼£¬ÀýÈç//<abc<Enter>:²éÕÒÒÔabc¿ªÊ¼µÄ×Ö·û´®
+ 6:  /<      åŒ¹é…ä¸€ä¸ªå•è¯çš„å¼€å§‹ï¼Œä¾‹å¦‚//<abc<Enter>:æŸ¥æ‰¾ä»¥abcå¼€å§‹çš„å­—ç¬¦ä¸²
 
- 7:  />      Æ¥ÅäÒ»¸öµ¥´ÊµÄ½áÊø£¬ÀýÈç/abc/><Enter>:²éÕÒÒÔabc½áÊøµÄ×Ö·û´® 
+ 7:  />      åŒ¹é…ä¸€ä¸ªå•è¯çš„ç»“æŸï¼Œä¾‹å¦‚/abc/><Enter>:æŸ¥æ‰¾ä»¥abcç»“æŸçš„å­—ç¬¦ä¸² 
 
  8:  
 
- 9:  *       Æ¥Åä0»ò¶à´Î
+ 9:  *       åŒ¹é…0æˆ–å¤šæ¬¡
 
-10:  /+      Æ¥Åä1»ò¶à´Î
+10:  /+      åŒ¹é…1æˆ–å¤šæ¬¡
 
-11:  /=      Æ¥Åä0»ò1´Î
+11:  /=      åŒ¹é…0æˆ–1æ¬¡
 
 12:  
 
-13:  .        Æ¥Åä³ý»»ÐÐ·ûÒÔÍâÈÎÒâ×Ö·û    
+13:  .        åŒ¹é…é™¤æ¢è¡Œç¬¦ä»¥å¤–ä»»æ„å­—ç¬¦    
 
-14:  /a      Æ¥ÅäÒ»¸ö×Ö·û
+14:  /a      åŒ¹é…ä¸€ä¸ªå­—ç¬¦
 
-15:  /d      Æ¥ÅäÈÎÒ»Êý×Ö      
+15:  /d      åŒ¹é…ä»»ä¸€æ•°å­—      
 
-16:  /u      Æ¥ÅäÈÎÒ»´óÐ´×ÖÄ¸
+16:  /u      åŒ¹é…ä»»ä¸€å¤§å†™å­—æ¯
 
 17:  
 
-18:  []      Æ¥Åä·¶Î§£¬Èçt[abcd]s Æ¥Åätas tbs tcs tds
+18:  []      åŒ¹é…èŒƒå›´ï¼Œå¦‚t[abcd]s åŒ¹é…tas tbs tcs tds
 
-19:  /{}     ÖØ¸´´ÎÊý£¬Èça/{3,5} Æ¥Åä3~5¸öa
+19:  /{}     é‡å¤æ¬¡æ•°ï¼Œå¦‚a/{3,5} åŒ¹é…3~5ä¸ªa
 
-20:  /( /)   ¶¨ÒåÖØ¸´×é£¬Èça/(xy/)b Æ¥Åäab axyb axyxyb axyxyxyb ...
+20:  /( /)   å®šä¹‰é‡å¤ç»„ï¼Œå¦‚a/(xy/)b åŒ¹é…ab axyb axyxyb axyxyxyb ...
 
-21:  /|      »ò£¬Èç£ºfor/|bar ±íÊ¾Æ¥Åäfor»òÕßbar
+21:  /|      æˆ–ï¼Œå¦‚ï¼šfor/|bar è¡¨ç¤ºåŒ¹é…foræˆ–è€…bar
 
 22:  
 
-23:  /%20c   Æ¥ÅäµÚ20ÁÐ
+23:  /%20c   åŒ¹é…ç¬¬20åˆ—
 
-24:  /%20l   Æ¥ÅäµÚ20ÐÐ
+24:  /%20l   åŒ¹é…ç¬¬20è¡Œ
 #+END_SRC 
 
-¹ØÓÚÕýÔò±í´ïÊ½µÄÏêÏ¸ÐÅÏ¢£¬Çë²Î¼û²Î¿¼ÎÄÏ×
-**** ÆäËüÓÃ·¨
+å…³äºŽæ­£åˆ™è¡¨è¾¾å¼çš„è¯¦ç»†ä¿¡æ¯ï¼Œè¯·å‚è§å‚è€ƒæ–‡çŒ®
+**** å…¶å®ƒç”¨æ³•
 
-1:  :s/str1/str2/          #ÓÃ×Ö·û´® str2 Ìæ»»ÐÐÖÐÊ×´Î³öÏÖµÄ×Ö·û´® str1
+1:  :s/str1/str2/          #ç”¨å­—ç¬¦ä¸² str2 æ›¿æ¢è¡Œä¸­é¦–æ¬¡å‡ºçŽ°çš„å­—ç¬¦ä¸² str1
 
-2:  :s/str1/str2/g         #ÓÃ×Ö·û´® str2 Ìæ»»ÐÐÖÐËùÓÐ³öÏÖµÄ×Ö·û´® str1
+2:  :s/str1/str2/g         #ç”¨å­—ç¬¦ä¸² str2 æ›¿æ¢è¡Œä¸­æ‰€æœ‰å‡ºçŽ°çš„å­—ç¬¦ä¸² str1
 
-3:  :.,$ s/str1/str2/g     #ÓÃ×Ö·û´® str2 Ìæ»»ÕýÎÄµ±Ç°ÐÐµ½Ä©Î²ËùÓÐ³öÏÖµÄ×Ö·û´® str1
+3:  :.,$ s/str1/str2/g     #ç”¨å­—ç¬¦ä¸² str2 æ›¿æ¢æ­£æ–‡å½“å‰è¡Œåˆ°æœ«å°¾æ‰€æœ‰å‡ºçŽ°çš„å­—ç¬¦ä¸² str1
 
-4:  :1,$ s/str1/str2/g     #ÓÃ×Ö·û´® str2 Ìæ»»ÕýÎÄÖÐËùÓÐ³öÏÖµÄ×Ö·û´® str1
+4:  :1,$ s/str1/str2/g     #ç”¨å­—ç¬¦ä¸² str2 æ›¿æ¢æ­£æ–‡ä¸­æ‰€æœ‰å‡ºçŽ°çš„å­—ç¬¦ä¸² str1
 
-5:  :g/str1/s//str2/g      #¹¦ÄÜÍ¬ÉÏ
+5:  :g/str1/s//str2/g      #åŠŸèƒ½åŒä¸Š
 
-´ÓÉÏÊöÌæ»»ÃüÁî¿ÉÒÔ¿´µ½£º
-g ·ÅÔÚÃüÁîÄ©Î²£¬±íÊ¾¶ÔÖ¸¶¨ÐÐµÄËÑË÷×Ö·û´®µÄÃ¿´Î³öÏÖ½øÐÐÌæ»»£»²»¼Ó g£¬±íÊ¾Ö»¶ÔÖ¸¶¨ÐÐµÄËÑË÷×Ö·û´®µÄÊ×´Î³öÏÖ½øÐÐÌæ»»£»
-g ·ÅÔÚÃüÁî¿ªÍ·£¬±íÊ¾¶ÔÕýÎÄÖÐËùÓÐ°üº¬ËÑË÷×Ö·û´®µÄÐÐ½øÐÐÌæ»»²Ù×÷¡£
-Ò²¾ÍÊÇËµÃüÁîµÄ¿ªÊ¼¿ÉÒÔÌí¼ÓÓ°ÏìµÄÐÐ£¬Èç¹ûÎªg±íÊ¾¶ÔËùÓÐÐÐ£»ÃüÁîµÄ½áÎ²¿ÉÒÔÊ¹ÓÃgÀ´±íÊ¾ÊÇ·ñ¶ÔÃ¿Ò»ÐÐµÄËùÓÐ×Ö·û´®¶¼ÓÐÓ°Ïì¡£
+ä»Žä¸Šè¿°æ›¿æ¢å‘½ä»¤å¯ä»¥çœ‹åˆ°ï¼š
+g æ”¾åœ¨å‘½ä»¤æœ«å°¾ï¼Œè¡¨ç¤ºå¯¹æŒ‡å®šè¡Œçš„æœç´¢å­—ç¬¦ä¸²çš„æ¯æ¬¡å‡ºçŽ°è¿›è¡Œæ›¿æ¢ï¼›ä¸åŠ  gï¼Œè¡¨ç¤ºåªå¯¹æŒ‡å®šè¡Œçš„æœç´¢å­—ç¬¦ä¸²çš„é¦–æ¬¡å‡ºçŽ°è¿›è¡Œæ›¿æ¢ï¼›
+g æ”¾åœ¨å‘½ä»¤å¼€å¤´ï¼Œè¡¨ç¤ºå¯¹æ­£æ–‡ä¸­æ‰€æœ‰åŒ…å«æœç´¢å­—ç¬¦ä¸²çš„è¡Œè¿›è¡Œæ›¿æ¢æ“ä½œã€‚
+ä¹Ÿå°±æ˜¯è¯´å‘½ä»¤çš„å¼€å§‹å¯ä»¥æ·»åŠ å½±å“çš„è¡Œï¼Œå¦‚æžœä¸ºgè¡¨ç¤ºå¯¹æ‰€æœ‰è¡Œï¼›å‘½ä»¤çš„ç»“å°¾å¯ä»¥ä½¿ç”¨gæ¥è¡¨ç¤ºæ˜¯å¦å¯¹æ¯ä¸€è¡Œçš„æ‰€æœ‰å­—ç¬¦ä¸²éƒ½æœ‰å½±å“ã€‚
