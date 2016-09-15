@@ -215,3 +215,6 @@ cd devstack;
 	nova list
 	nova stop my_inst
 nova delete my_inst
+* Linux
+** hardware
+$cat /proc/scsi/scsi   #查看scsi型号
