@@ -10,6 +10,8 @@
 
 * Software
 ** GIT
+git add  xxx
+git commit xxx -m "yyyy"
 git push -u origin master
 git pull origin master
 
