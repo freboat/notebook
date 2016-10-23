@@ -225,4 +225,15 @@ $cat /proc/scsi/scsi   #查看scsi型号
    $sudo docker search docker-dev
    $sudo docker pull docker-dev:1.0.1
 
+   $sudo docker run --rm -it --privileged \
+   -e BUILDFLAGS -e DOCKER_CLIENTONLY -e DOCKER_EXECDRIVER -e DOCKER_EXPERIMENTAL \
+   -e DOCKER_GRAPHDRIVER -e DOCKER_STORAGE_OPTS -e DOCKER_USERLANDPROXY -e TESTDIRS -e TESTFLAGS -e TIMEOUT \
+   -v /home/brook/bundles:/go/src/github.com/docker/docker/bundles docker-dev:1.8.3 bash
   
+  
+   $sudo docker run --rm -it --privileged \
+   -e BUILDFLAGS -e DOCKER_CLIENTONLY -e DOCKER_EXECDRIVER -e DOCKER_EXPERIMENTAL \
+   -e DOCKER_GRAPHDRIVER -e DOCKER_STORAGE_OPTS -e DOCKER_USERLANDPROXY -e TESTDIRS -e TESTFLAGS -e TIMEOUT \
+   -v /home/brook/bundles:/go/src/github.com/dotcloud/docker/bundles docker-dev:v1.0.1 bash
+  
+   #./hack/make.sh binary   
