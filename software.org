@@ -218,3 +218,9 @@ nova delete my_inst
 * Linux
 ** hardware
 $cat /proc/scsi/scsi   #查看scsi型号
+* Docker
+** Docker compile
+   $sudo docker search docker-dev
+   $sudo docker pull docker-dev:1.0.1
+
+  
